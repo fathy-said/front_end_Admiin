@@ -11,11 +11,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { BrandingWatermark, KeyboardDoubleArrowLeft } from '@mui/icons-material';
-import { Button, IconButton } from '@mui/material';
+import { NavLink, } from 'react-router-dom';
+import { BrandingWatermark, DesignServices, KeyboardDoubleArrowLeft, Sell } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 const SidBar = ({ drawerWidth, container, mobileOpen, handleDrawerToggle, i18n }) => {
-  let navigate = useNavigate()
   let drawer = useMemo(() => {
     return (
       <>
@@ -23,6 +22,8 @@ const SidBar = ({ drawerWidth, container, mobileOpen, handleDrawerToggle, i18n }
         <List>
           {/* <NavLink to={'/admin/shop'} className='w-100 text-decoration-none'>
             </NavLink> */}
+          {/* ========================= Dashboard======================== */}
+
           <ListItem disablePadding   >
             <NavLink to={'/admin/'} className='w-100 text-decoration-none'>
               <ListItemButton sx={{ color: '#fff' }}  >
@@ -34,7 +35,7 @@ const SidBar = ({ drawerWidth, container, mobileOpen, handleDrawerToggle, i18n }
             </NavLink>
 
           </ListItem>
-          {/* ================================================= */}
+          {/* ========================= Shop======================== */}
 
           <ListItem disablePadding   >
 
@@ -48,7 +49,7 @@ const SidBar = ({ drawerWidth, container, mobileOpen, handleDrawerToggle, i18n }
             </NavLink>
 
           </ListItem>
-          {/* ================================================= */}
+          {/* ======================== Brand========================= */}
           <ListItem disablePadding   >
             <NavLink to={'/admin/brand'} className='w-100 text-decoration-none'>
               <ListItemButton sx={{ color: '#fff' }} >
@@ -59,6 +60,34 @@ const SidBar = ({ drawerWidth, container, mobileOpen, handleDrawerToggle, i18n }
               </ListItemButton>
             </NavLink>
           </ListItem>
+          {/* ========================Services================================ */}
+          <ListItem disablePadding   >
+            <NavLink to={'/admin/services'} className='w-100 text-decoration-none'>
+              <ListItemButton sx={{ color: '#fff' }} >
+                <ListItemIcon >
+                  <DesignServices sx={{ color: '#fff' }} />
+                </ListItemIcon>
+                <ListItemText primary={'Services'} />
+              </ListItemButton>
+            </NavLink>
+            {/* ================================================= */}
+          </ListItem>
+          {/* ========================== Products============================= */}
+
+          <ListItem disablePadding   >
+            <NavLink to={'/admin/products'} className='w-100 text-decoration-none'>
+              <ListItemButton sx={{ color: '#fff' }}  >
+                <ListItemIcon >
+                  <Sell sx={{ color: '#fff' }} />
+                </ListItemIcon>
+                <ListItemText primary={'Products'} />
+              </ListItemButton>
+            </NavLink>
+
+            {/* ================================================= */}
+          </ListItem>
+          {/* ======================================================== */}
+
         </List>
         {/* <Divider /> */}
       </>

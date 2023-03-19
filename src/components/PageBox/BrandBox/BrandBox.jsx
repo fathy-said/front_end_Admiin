@@ -1,10 +1,8 @@
 import React from 'react';
 import {
-  Avatar,
   Box,
   Card,
   Container,
-  Icon,
   IconButton,
   styled,
   Table,
@@ -12,9 +10,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  Typography,
 } from '@mui/material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
@@ -49,7 +45,7 @@ const ProductTable = styled(Table)(() => ({
 }));
 
 const BrandBox = ({ title, list, setOpen }) => {
-  const navigation = useNavigate();
+  // const navigation = useNavigate();
 
   return (
 

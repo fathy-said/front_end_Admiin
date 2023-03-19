@@ -3,14 +3,11 @@ import Brand from "./Pages/Brand";
 import Dashboard from "./Pages/Dashboard";
 import Layout from "./Pages/Layout";
 import Login from "./Pages/Login";
+import Services from "./Pages/Services/Services";
 import Shop from "./Pages/Shop";
-
-
-
-
+import Products from "./Pages/Products/Products";
 
 export let Router = createBrowserRouter([
-
   {
     path: "/",
     element: <Login />,
@@ -31,6 +28,14 @@ export let Router = createBrowserRouter([
         element: <Brand />,
       },
       {
+        path: "services",
+        element: <Services />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
+      {
         // path: "admin",
         // element: <Admin />,
         // loader: async (e) => {
@@ -39,8 +44,8 @@ export let Router = createBrowserRouter([
         //   return e
         // },
       },
-
     ],
   },
+
 
 ]);

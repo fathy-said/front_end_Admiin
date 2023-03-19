@@ -35,7 +35,7 @@ const Layout = (props) => {
 
         <Box
           component="main"
-          sx={{ mt: '20px', width: { sm: `calc(100% - ${drawerWidth}px)` }, overflow: "hidden" }}
+          sx={{ mt: '20px', width: { xs: '100%', sm: `calc(100% - ${drawerWidth}px)` }, overflow: "hidden" }}
         >
 
           <Toolbar />
