@@ -41,6 +41,31 @@ const SidBar = ({ drawerWidth, container, mobileOpen, handleDrawerToggle, i18n }
               <ListItemText primary={'shop'} />
             </ListItemButton>
           </ListItem>
+          
+          <ListItem disablePadding   >
+            <ListItemButton sx={{ color: '#fff' }} onClick={() => {
+              navigate('/admin/services')
+            }} >
+              <ListItemIcon >
+                <InboxIcon sx={{ color: '#fff' }} />
+              </ListItemIcon>
+              <ListItemText primary={'Services'} />
+            </ListItemButton>
+            {/* ================================================= */}
+          </ListItem>
+          
+          <ListItem disablePadding   >
+            <ListItemButton sx={{ color: '#fff' }} onClick={() => {
+              navigate('/admin/products')
+            }} >
+              <ListItemIcon >
+                <InboxIcon sx={{ color: '#fff' }} />
+              </ListItemIcon>
+              <ListItemText primary={'Products'} />
+            </ListItemButton>
+            {/* ================================================= */}
+          </ListItem>
+          
         </List>
         {/* <Divider /> */}
 
