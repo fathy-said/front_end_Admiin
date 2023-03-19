@@ -4,7 +4,6 @@ import { Button, FormControl, IconButton, Input, InputAdornment, TextField, Typo
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useNavigate } from 'react-router';
 import { useFormik } from 'formik';
-import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { LoginThunk } from '../../RTK/Thunk/LoginThunk';
@@ -23,8 +22,6 @@ const SignupSchema = Yup.object().shape({
 const LoginBox = () => {
   let dispatch = useDispatch()
   let navigate = useNavigate()
-  let { t, i18n } = useTranslation()
-  // console.log(i18n)
   let { code } = useSelector((state) => state.LoginReducer);
   const [showPassword, setShowPassword] = React.useState(false);
   const [showErrorForm, setShowErrorForm] = React.useState(false);

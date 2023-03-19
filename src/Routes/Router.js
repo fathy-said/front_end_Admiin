@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import Layout from "./Pages/Layout";
 import Login from "./Pages/Login";
+import Shop from "./Pages/Shop";
 
 
 
@@ -20,6 +21,10 @@ export let Router = createBrowserRouter([
     errorElement: <div>errorElement</div>,
     children: [
       { index: true, element: <Dashboard /> },
+      {
+        path: "shop",
+        element: <Shop />,
+      },
       {
         // path: "admin",
         // element: <Admin />,
