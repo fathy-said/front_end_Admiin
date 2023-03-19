@@ -11,12 +11,12 @@ export let Router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
-    errorElement: <div>errorElement</div>,
+    errorElement: <div>errorElementS</div>,
   },
   {
     path: "/admin",
     element: <Layout />,
-    errorElement: <div>errorElement</div>,
+    errorElement: <div>errorElementS</div>,
     children: [
       { index: true, element: <Dashboard /> },
       {
