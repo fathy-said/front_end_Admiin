@@ -27,72 +27,75 @@ const Header = ({ drawerWidth, handleDrawerToggle, i18n }) => {
         }}
         className="header"
       >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon sx={{ color: '#000' }} />
-          </IconButton>
-
-        </Toolbar>
-
-        <Box className='box-left' >
-
-          {
-
-            i18n.language === 'ar' ? (
-              <Button variant="contained" color="primary" sx={{ width: '40px', height: '40px', minWidth: '40px' }} className=' !rounded-full  !bg-slate-400 !ml-3' onClick={() => {
-                i18n.changeLanguage('en')
-              }}>
-                en
-              </Button>
-            ) : (
-              <Button variant='contained' sx={{ width: '40px', height: '40px', minWidth: '40px' }} className='  !rounded-full !bg-slate-400 !mr-3' onClick={() => {
-                i18n.changeLanguage('ar')
-              }}>
-                ar
-              </Button>
-
-            )
-
-
-          }
-
-
-          <Tooltip title="Open settings">
-            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+        <div className="container">
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon sx={{ color: '#000' }} />
             </IconButton>
-          </Tooltip>
-          <Menu
-            sx={{ mt: '45px' }}
-            id="menu-appbar"
-            anchorEl={anchorElUser}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            open={Boolean(anchorElUser)}
-            onClose={handleCloseUserMenu}
-          >
-            {settings.map((setting) => (
-              <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">{setting}</Typography>
-              </MenuItem>
-            ))}
-          </Menu>
+
+          </Toolbar>
+
+          <Box className='box-left' >
+
+            {
+
+              i18n.language === 'ar' ? (
+                <Button variant="contained" color="primary" sx={{ width: '40px', height: '40px', minWidth: '40px' }} className=' !rounded-full  !bg-slate-400 !ml-3' onClick={() => {
+                  i18n.changeLanguage('en')
+                }}>
+                  en
+                </Button>
+              ) : (
+                <Button variant='contained' sx={{ width: '40px', height: '40px', minWidth: '40px' }} className='  !rounded-full !bg-slate-400 !mr-3' onClick={() => {
+                  i18n.changeLanguage('ar')
+                }}>
+                  ar
+                </Button>
+
+              )
 
 
-        </Box>
+            }
+
+
+            <Tooltip title="Open settings">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+
+
+          </Box>
+        </div>
+
 
       </AppBar>
     </>

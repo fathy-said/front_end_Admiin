@@ -2,7 +2,6 @@
 /* justify-content: flex-end !important; */
 
 }
-/* .sidbar .MuiDrawer-paper{
-background: #000;
-
-} */
+.sidbar ul .active{
+background-color: var(--text-color-02);
+}

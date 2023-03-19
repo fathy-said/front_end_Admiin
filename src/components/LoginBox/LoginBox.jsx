@@ -119,10 +119,7 @@ const LoginBox = () => {
                   <span style={{ width: "100%", color: 'red', fontSize: '15px', marginTop: '5px' }}>{formik.errors.pass}</span>
                 ) : null}
               </Typography>
-              <span onClick={() => {
-                navigate('/register')
 
-              }} >Forgot Password</span>
               <Button className='submit' variant="contained" type='submit'  >contact</Button>
               <span style={{ display: showErrorForm ? 'block' : 'none', color: 'red', textAlign: 'center', width: '100%' }}>email or password is wrong</span>
             </Typography>

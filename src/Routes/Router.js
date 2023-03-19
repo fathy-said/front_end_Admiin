@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Brand from "./Pages/Brand";
 import Dashboard from "./Pages/Dashboard";
 import Layout from "./Pages/Layout";
 import Login from "./Pages/Login";
@@ -24,6 +25,10 @@ export let Router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop />,
+      },
+      {
+        path: "brand",
+        element: <Brand />,
       },
       {
         // path: "admin",
