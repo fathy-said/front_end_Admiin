@@ -11,7 +11,9 @@ export let Router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
+
     errorElement: <div>errorElement</div>,
+
   },
   {
     path: "/admin",
