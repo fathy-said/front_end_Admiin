@@ -3,16 +3,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
-import './BrandModal.css'
+import './ShopModal.css'
 import IconButton from '@mui/material/IconButton'
-
-
-
-
-const BrandModal = ({ open, setOpen, nameBrand, setNameBrand }) => {
+const ShopModal = ({ open, setOpen, editData, setEditData }) => {
   const handleClose = useCallback(() => {
     setOpen(false)
   }, [setOpen]);
+
   return (
     <>
       <Modal
@@ -21,26 +18,36 @@ const BrandModal = ({ open, setOpen, nameBrand, setNameBrand }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className="brand-modal" >
+        <Box className="shop-modal" >
           <form action="" dir='' onSubmit={(e) => {
             e.preventDefault();
-
           }}>
-
             <IconButton aria-label="" onClick={() => {
               setOpen(false)
-
             }}
               className="close-modal"
             >
               <CloseIcon />
-
             </IconButton>
-            <h5>New Brand Name</h5>
-            <input type="text" placeholder='Brand Name' value={nameBrand} onChange={(e) => {
-
-              setNameBrand(e.target.value);
-            }} />
+            <h5>Edit shop detail </h5>
+            <div>
+              <h6>name</h6>
+              <input type="text" placeholder='Name ' value={editData.name} onChange={(e) => {
+                setEditData({ ...editData, name: e.target.value });
+              }} />
+            </div>
+            <div>
+              <h6>Phone</h6>
+              <input type="text" placeholder='Number' value={editData.phone} onChange={(e) => {
+                setEditData({ ...editData, phone: e.target.value });
+              }} />
+            </div>
+            <div>
+              <h6>Address</h6>
+              <input type="text" placeholder='Address' value={editData.address} onChange={(e) => {
+                setEditData({ ...editData, address: e.target.value });
+              }} />
+            </div>
             <Button className='submit' variant="contained" type='submit'    >Submit</Button>
           </form>
         </Box>
@@ -49,4 +56,4 @@ const BrandModal = ({ open, setOpen, nameBrand, setNameBrand }) => {
   );
 }
 
-export default React.memo(BrandModal);
+export default ShopModal;

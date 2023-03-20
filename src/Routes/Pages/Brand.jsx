@@ -1,6 +1,7 @@
 import React from 'react';
-import BrandModal from '../../components/BrandModal/BrandModal';
-import BrandBox from '../../components/PageBox/BrandBox/BrandBox';
+import { BrandBox, BrandModal } from '../../components';
+
+
 const productList = [
   {
     imgUrl: "./assets/headphone-2.jpg",

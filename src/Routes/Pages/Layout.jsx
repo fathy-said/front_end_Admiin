@@ -10,8 +10,22 @@ const drawerWidth = 240;
 
 const Layout = (props) => {
   // const location = useLocation();
+  //handle language
   let { t, i18n } = useTranslation()
-  console.log(i18n)
+  useEffect(() => {
+    if (i18n.language === 'ar') {
+      document.querySelector('html').lang = 'ar'
+      document.querySelector('html').dir = 'rtl'
+
+    }
+    else {
+      document.querySelector('html').lang = 'en'
+      document.querySelector('html').dir = 'ltr'
+
+    }
+
+  }, [i18n.language]);
+  //handle language
   // useEffect(() => {
   //   document.querySelector('html').style.scrollBehavior = 'auto'
   //   window.scroll({ top: 0 })
@@ -23,6 +37,7 @@ const Layout = (props) => {
     setMobileOpen(!mobileOpen);
   };
   const container = window !== undefined ? () => window().document.body : undefined;
+
   return (
     <>
 

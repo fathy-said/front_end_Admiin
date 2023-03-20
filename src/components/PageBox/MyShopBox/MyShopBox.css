@@ -1,0 +1,21 @@
+.myShop-box {
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myShop-box img {
+  max-width: 100%;
+}
+
+.myShop-box h2 {
+  font-size: 30px;
+  font-weight: 600;
+
+}
+
+.myShop-box h4 {
+  font-size: 28px;
+  font-weight: 500;
+}
