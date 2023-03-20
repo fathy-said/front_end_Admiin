@@ -46,13 +46,13 @@ const Header = ({ drawerWidth, handleDrawerToggle, i18n }) => {
             {
 
               i18n.language === 'ar' ? (
-                <Button variant="contained" color="primary" sx={{ width: '40px', height: '40px', minWidth: '40px' }} className=' !rounded-full  !bg-slate-400 !ml-3' onClick={() => {
+                <Button variant="contained" color="primary" sx={{ width: '35px', height: '35px', minWidth: '35px', }} className='  rounded-circle  !bg-slate-400 !ml-3' onClick={() => {
                   i18n.changeLanguage('en')
                 }}>
                   en
                 </Button>
               ) : (
-                <Button variant='contained' sx={{ width: '40px', height: '40px', minWidth: '40px' }} className='  !rounded-full !bg-slate-400 !mr-3' onClick={() => {
+                <Button variant='contained' sx={{ width: '35px', height: '35px', minWidth: '35px', }} className=' rounded-circle !bg-slate-400 !mr-3' onClick={() => {
                   i18n.changeLanguage('ar')
                 }}>
                   ar
@@ -66,7 +66,7 @@ const Header = ({ drawerWidth, handleDrawerToggle, i18n }) => {
 
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="https://mui.com/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
